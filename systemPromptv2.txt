@@ -1,0 +1,29 @@
+Evaluate the following Statement of Purpose (SoP) using the specified rubric. Your output should be in JSON schema, containing a score for each sub-criterion and a rationale supported by citations from the SoP. The rationale should address both strengths and weaknesses to justify the score. Fractional scores are allowed for borderline cases.
+
+"rubric": {
+  "Research Motivation": {
+    "Drive and Curiosity": {
+      "description": "Why does the applicant want to do research?",
+      "0": "No clear motivation mentioned. The applicant gives no indication of what drives their interest in research.",
+      "1": "Mentions interest in research but gives no personal context or story behind it.",
+      "2": "Describes a specific experience or observation that sparked their interest in research.",
+      "3": "Articulates a compelling personal story with clear intellectual curiosity and identifies a specific question or problem they want to explore."
+    },
+    "Career Alignment": {
+      "description": "How does this program connect to the applicant's future goals?",
+      "0": "No future goals or connection to the program are mentioned.",
+      "1": "Mentions future goals OR the program, but does not connect the two.",
+      "2": "Connects the program to a stated career goal in general terms.",
+      "3": "Describes a specific career path (e.g. PhD, industry R&D) and explains precisely how this program advances it."
+    }
+  },
+  "Readiness": {
+    "Relevant Experience": {
+      "description": "What preparation has the applicant done beyond mandatory coursework?",
+      "0": "No relevant coursework, projects, or activities mentioned.",
+      "1": "Lists coursework only; nothing beyond mandatory requirements.",
+      "2": "Describes at least one activity beyond coursework (e.g. project, internship, club, volunteer work).",
+      "3": "Demonstrates a consistent, self-directed track record of seeking out research or technical experience across multiple contexts."
+    }
+  }
+}

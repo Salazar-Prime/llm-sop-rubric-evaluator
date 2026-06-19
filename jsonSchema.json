@@ -1,0 +1,77 @@
+{
+  "name": "sop_evaluation",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "evaluation": {
+        "type": "object",
+        "properties": {
+          "research_motivation": {
+            "type": "object",
+            "properties": {
+              "drive_and_curiosity": {
+                "type": "object",
+                "properties": {
+                  "score": {
+                    "type": "integer",
+                    "description": "Score for Drive and Curiosity (0–3)."
+                  },
+                  "rationale": {
+                    "type": "string",
+                    "description": "Justification for the score supported by citations from the SoP."
+                  }
+                },
+                "required": ["score", "rationale"],
+                "additionalProperties": false
+              },
+              "career_alignment": {
+                "type": "object",
+                "properties": {
+                  "score": {
+                    "type": "integer",
+                    "description": "Score for Career Alignment (0–3)."
+                  },
+                  "rationale": {
+                    "type": "string",
+                    "description": "Justification for the score supported by citations from the SoP."
+                  }
+                },
+                "required": ["score", "rationale"],
+                "additionalProperties": false
+              }
+            },
+            "required": ["drive_and_curiosity", "career_alignment"],
+            "additionalProperties": false
+          },
+          "readiness": {
+            "type": "object",
+            "properties": {
+              "relevant_experience": {
+                "type": "object",
+                "properties": {
+                  "score": {
+                    "type": "integer",
+                    "description": "Score for Relevant Experience (0–3)."
+                  },
+                  "rationale": {
+                    "type": "string",
+                    "description": "Justification for the score supported by citations from the SoP."
+                  }
+                },
+                "required": ["score", "rationale"],
+                "additionalProperties": false
+              }
+            },
+            "required": ["relevant_experience"],
+            "additionalProperties": false
+          }
+        },
+        "required": ["research_motivation", "readiness"],
+        "additionalProperties": false
+      }
+    },
+    "required": ["evaluation"],
+    "additionalProperties": false
+  }
+}

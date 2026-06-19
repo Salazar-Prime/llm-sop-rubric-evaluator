@@ -1,0 +1,7 @@
+pandas
+openai
+python-dotenv
+fuzzywuzzy
+python-Levenshtein
+reportlab
+openpyxl

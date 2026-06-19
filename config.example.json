@@ -1,0 +1,11 @@
+{
+  "programName": "SURF",
+  "institution": "Purdue University",
+  "openaiModel": "gpt-5.4-mini",
+  "reasoningEffort": "low",
+  "inputCsv": "sample_data/applicants_sample.csv",
+  "instructionFile": "instructionSoP.txt",
+  "outputDir": "outputs",
+  "maxWordCountSkip": 1500,
+  "pdfReportTitle": "SoP Rubric Evaluation Report"
+}
