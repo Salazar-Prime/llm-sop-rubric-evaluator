@@ -15,7 +15,7 @@ scores back onto the applicant roster, and generates a paginated PDF report.
 ## Contents
 
 - [Overview](#overview)
-  - [Score anchors](#score-anchors)
+  - [Rubric](#rubric)
 - [Prerequisites](#prerequisites)
 - [Quick start](#quick-start)
 - [Input format](#input-format)
@@ -47,7 +47,14 @@ must be supported by a rationale with citations from the SoP.
 | | Career Alignment | How does this program connect to the applicant's future goals? |
 | **Readiness** | Relevant Experience | What preparation has the applicant done beyond mandatory coursework? |
 
-### Score anchors
+<a id="rubric"></a>
+
+### Rubric
+
+The criteria and 0–3 score descriptions below mirror `systemPromptv2.txt`. **Edit that file**
+to change the rubric for your program. If you add or rename criteria, also update
+`jsonSchema.json` and the column mappings in the step scripts — see
+[Customizing the rubric](#customizing-the-rubric).
 
 **Drive and Curiosity**
 
