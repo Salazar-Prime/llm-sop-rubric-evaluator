@@ -1,4 +1,4 @@
-# llm-sop-rubric-evaluator
+# LLM + Rubric-Based Statement of Purpose/ Abstract Evaluator
 
 Automated rubric-based scoring of Statements of Purpose (SoPs) using OpenAI structured outputs.
 The pipeline cleans raw applicant text, sends each SoP to an LLM with a 3-criterion rubric, merges
