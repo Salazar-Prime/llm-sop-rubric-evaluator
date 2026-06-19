@@ -4,6 +4,7 @@
 ![OpenAI](https://img.shields.io/badge/Model-gpt--5.4--mini-412991?logo=openai&logoColor=white)
 ![Pipeline](https://img.shields.io/badge/Pipeline-4%20steps-0A66C2)
 ![Rubric](https://img.shields.io/badge/Rubric-3%20criteria-F59E0B)
+[![arXiv](https://img.shields.io/badge/arXiv-2606.05564-B31B1B)](https://arxiv.org/abs/2606.05564)
 ![License](https://img.shields.io/badge/License-MIT-22C55E)
 
 Automated rubric-based scoring of Statements of Purpose (SoPs) using OpenAI structured outputs.
