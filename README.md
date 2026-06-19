@@ -1,8 +1,37 @@
 # LLM + Rubric-Based Statement of Purpose/ Abstract Evaluator
 
+![Python](https://img.shields.io/badge/Python-3.11.7-3776AB?logo=python&logoColor=white)
+![OpenAI](https://img.shields.io/badge/Model-gpt--5.4--mini-412991?logo=openai&logoColor=white)
+![Pipeline](https://img.shields.io/badge/Pipeline-4%20steps-0A66C2)
+![Rubric](https://img.shields.io/badge/Rubric-3%20criteria-F59E0B)
+![License](https://img.shields.io/badge/License-MIT-22C55E)
+
 Automated rubric-based scoring of Statements of Purpose (SoPs) using OpenAI structured outputs.
 The pipeline cleans raw applicant text, sends each SoP to an LLM with a 3-criterion rubric, merges
 scores back onto the applicant roster, and generates a paginated PDF report.
+
+---
+
+## Contents
+
+- [Overview](#overview)
+  - [Score anchors](#score-anchors)
+- [Prerequisites](#prerequisites)
+- [Quick start](#quick-start)
+- [Input format](#input-format)
+  - [Removing embedded prompt questions](#removing-embedded-prompt-questions)
+- [Customizing the rubric](#customizing-the-rubric)
+- [Pipeline launcher (`run_pipeline.py`)](#pipeline-launcher-run_pipelinepy)
+  - [Common invocations](#common-invocations)
+- [Pipeline steps](#pipeline-steps)
+  - [Step 1 — Clean SoP data](#step-1)
+  - [Step 2 — Evaluate SoPs via OpenAI](#step-2)
+  - [Step 3 — Merge results onto roster](#step-3)
+  - [Step 4 — Generate PDF report](#step-4)
+- [Outputs](#outputs)
+- [Cost note](#cost-note)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -171,6 +200,8 @@ python run_pipeline.py --title "Summer 2025 SoP Report"   # custom PDF title
 
 ## Pipeline steps
 
+<a id="step-1"></a>
+
 ### Step 1 — Clean SoP data (`steps/step1_clean.py`)
 
 Reads the applicants CSV, strips embedded instruction text (fuzzy-matched against
@@ -201,6 +232,8 @@ python run_pipeline.py --steps 1
 **Output:** `outputs/cleanedData.xlsx` → feeds Step 2
 
 ---
+
+<a id="step-2"></a>
 
 ### Step 2 — Evaluate SoPs via OpenAI (`steps/step2_evaluate.py`)
 
@@ -235,6 +268,8 @@ python run_pipeline.py --steps 2 --start-index 50
 
 ---
 
+<a id="step-3"></a>
+
 ### Step 3 — Merge results onto roster (`steps/step3_merge.py`)
 
 Joins `combined_results.xlsx` onto the original applicants CSV by `guid`. All original roster
@@ -259,6 +294,8 @@ python run_pipeline.py --steps 3
 **Output:** `outputs/applicants_graded.xlsx` → feeds Step 4
 
 ---
+
+<a id="step-4"></a>
 
 ### Step 4 — Generate PDF report (`steps/step4_report.py`)
 
