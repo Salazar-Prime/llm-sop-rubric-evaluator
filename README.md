@@ -10,6 +10,9 @@ Automated rubric-based scoring of Statements of Purpose (SoPs) using OpenAI stru
 The pipeline cleans raw applicant text, sends each SoP to an LLM with a 3-criterion rubric, merges
 scores back onto the applicant roster, and generates a paginated PDF report.
 
+This tool implements the workflow described in our work-in-progress paper on LLM-assisted
+application review for Purdue SURF ([arXiv:2606.05564](https://arxiv.org/abs/2606.05564)).
+
 ---
 
 ## Contents
@@ -30,6 +33,7 @@ scores back onto the applicant roster, and generates a paginated PDF report.
   - [Step 4 — Generate PDF report](#step-4)
 - [Outputs](#outputs)
 - [Cost note](#cost-note)
+- [Citation](#citation)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
@@ -354,6 +358,27 @@ error and continues; re-run with `--start-index N` to resume from where it stopp
 
 ---
 
+## Citation
+
+If you use this tool in academic work, please cite:
+
+> Aggarwal, V., Kobak, K., & Howarter, J. (2026). *Using Large Language Models to Support High Volume Application Review for an Undergraduate Research Program*. arXiv:2606.05564. [https://arxiv.org/abs/2606.05564](https://arxiv.org/abs/2606.05564)
+
+```bibtex
+@misc{aggarwal2026using,
+  title         = {Using Large Language Models to Support High Volume Application Review for an Undergraduate Research Program},
+  author        = {Aggarwal, Varun and Kobak, Kay and Howarter, John},
+  year          = {2026},
+  eprint        = {2606.05564},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  doi           = {10.48550/arXiv.2606.05564},
+  url           = {https://arxiv.org/abs/2606.05564}
+}
+```
+
+---
+
 ## License
 
 MIT — see `LICENSE`.
@@ -362,4 +387,5 @@ MIT — see `LICENSE`.
 
 ## Acknowledgments
 
-Rubric developed for the Purdue EURO / SURF undergraduate research program.
+Rubric developed for the Purdue EURO / SURF undergraduate research program. See
+[Citation](#citation) for the associated arXiv preprint.
